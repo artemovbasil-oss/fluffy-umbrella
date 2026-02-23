@@ -79,9 +79,6 @@ body {
   inset: 16px 16px auto;
   height: 330px;
   grid-template-columns: repeat(6, 1fr);
-  transform: translateY(0) scale(1.02);
-  transition: transform 160ms linear;
-  will-change: transform;
 }
 
 .hero-strip img,
@@ -214,20 +211,11 @@ body {
   padding: 8px;
 }
 
-:root[data-theme="light"] .logo-chip {
-  background: #fff;
-  border-color: #ddd;
-}
-
 .logo-chip img {
   max-width: 100%;
   max-height: 50px;
   object-fit: contain;
   filter: brightness(1.15) contrast(1.05);
-}
-
-:root[data-theme="light"] .logo-chip img {
-  filter: contrast(1.05);
 }
 
 .brand-cards {
@@ -315,7 +303,7 @@ body {
 }
 
 .salons-strip {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .salons-strip .shot {
@@ -365,7 +353,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-strip,
   .card,
   [data-reveal] {
     transition: none;
