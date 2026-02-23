@@ -8,177 +8,177 @@ const slides = [
   },
   {
     n: "02",
-    t: "О компании",
-    d: "IdeaDecor — эксклюзивный представитель ведущих мебельных брендов Италии и Франции. 20+ лет на рынке, 1500+ проектов, комплектация под ключ.",
-    s: "Слайд 002",
-    img: "https://images.unsplash.com/photo-1616627561839-074385245ff6?auto=format&fit=crop&w=1800&q=80"
+    t: "О компании ID Gallery",
+    d: "IdeaDecor — эксклюзивный официальный представитель ведущих мебельных брендов Италии и Франции класса люкс. 20+ лет на рынке, 1500+ реализованных проектов, комплектация под ключ.",
+    s: "Слайд 002 · О компании",
+    img: "https://www.figma.com/api/mcp/asset/4065e8be-09a1-4a88-bdb8-9548f969a600"
   },
   {
     n: "03",
     t: "Наши бренды",
-    d: "Коллекции премиальной мебели, света и декора с акцентом на дизайн, качество и долговечность.",
-    s: "Слайд 003",
+    d: "Портфолио премиальных европейских брендов мебели, освещения и декора.",
+    s: "Слайд 003 · Бренды",
     img: "https://images.unsplash.com/photo-1617104551722-3b2d5136640c?auto=format&fit=crop&w=1800&q=80"
   },
   {
     n: "04",
-    t: "Итальянское наследие",
-    d: "Иконы современного интерьера и лимитированные коллекции для частных резиденций и общественных пространств.",
-    s: "Слайд 004",
+    t: "Фото салонов",
+    d: "Реальные интерьерные сцены и экспозиции салонов ID Gallery.",
+    s: "Слайд 004 · Салоны",
     img: "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1800&q=80"
   },
   {
     n: "05",
-    t: "Armani Casa",
-    d: "Выверенные пропорции, благородные материалы и эстетика современной роскоши.",
-    s: "Слайд 005",
+    t: "Галерея брендов",
+    d: "Подборка визуальных материалов по премиальным коллекциям.",
+    s: "Слайд 005 · Бренды",
     img: "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1800&q=80"
   },
   {
     n: "06",
-    t: "Riva 1920",
-    d: "Авторская работа с массивом дерева, скульптурный характер и природная текстура.",
-    s: "Слайд 006",
-    img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb3?auto=format&fit=crop&w=1800&q=80"
+    t: "Baxter",
+    d: "Знаменитая итальянская фабрика Baxter вывела натуральную кожу в ранг искусства. ID Gallery - эксклюзивный дистрибьютор Baxter в Алматы.",
+    s: "Слайд 006 · Baxter",
+    img: "https://www.figma.com/api/mcp/asset/e3969075-0e30-4688-8a17-899d5a433b3e"
   },
   {
     n: "07",
-    t: "Poliform",
-    d: "Чистая архитектура пространства и модульные решения для жизни без компромиссов.",
-    s: "Слайд 007",
-    img: "https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=1800&q=80"
+    t: "Baxter",
+    d: "Фото-экспозиция бренда Baxter.",
+    s: "Слайд 007 · Baxter",
+    img: "https://www.figma.com/api/mcp/asset/a6bf8923-67c9-473f-ad8a-66b934787c76"
   },
   {
     n: "08",
     t: "Molteni&C",
-    d: "Легендарная фабрика с более чем 90-летней историей, объединяющая искусство и инновации.",
-    s: "Слайд 008",
-    img: "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1800&q=80"
+    d: "Легендарная итальянская фабрика Molteni&C более 90 лет задает тон в мире современной роскошной мебели. ID Gallery - лучшие условия на мебель Molteni&C в Казахстане.",
+    s: "Слайд 008 · Molteni&C",
+    img: "https://www.figma.com/api/mcp/asset/9e804100-5187-4503-b80e-f77d548722ae"
   },
   {
     n: "09",
-    t: "Trussardi Casa",
-    d: "Итальянская элегантность, выразительные силуэты и статусный характер коллекций.",
-    s: "Слайд 009",
-    img: "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=1800&q=80"
+    t: "Molteni&C",
+    d: "Фото-экспозиция бренда Molteni&C.",
+    s: "Слайд 009 · Molteni&C",
+    img: "https://www.figma.com/api/mcp/asset/b5366c2b-9058-48f2-a4fd-d6602afa28e8"
   },
   {
     n: "10",
-    t: "Rugiano",
-    d: "Металл, кожа и ремесленные детали, превращающие мебель в арт-объект.",
-    s: "Слайд 010",
-    img: "https://images.unsplash.com/photo-1616594039964-3fbd5b9f0b29?auto=format&fit=crop&w=1800&q=80"
+    t: "Roberto Cavalli Home Interiors",
+    d: "Итальянский бренд, вдохновленный культовым дизайнером Роберто Кавалли. Продукцию Roberto Cavalli Home Interiors в Казахстане можно приобрести в ID Gallery.",
+    s: "Слайд 010 · Roberto Cavalli",
+    img: "https://www.figma.com/api/mcp/asset/1c66caa4-6cf5-4d9e-acc9-46fed2ac1b5b"
   },
   {
     n: "11",
-    t: "Visionnaire",
-    d: "Смелый интерьерный couture-подход: высокая мода, перенесенная в пространство дома.",
-    s: "Слайд 011",
-    img: "https://images.unsplash.com/photo-1616593969747-4797dc75033e?auto=format&fit=crop&w=1800&q=80"
+    t: "Roberto Cavalli Home Interiors",
+    d: "Фото-экспозиция бренда Roberto Cavalli Home Interiors.",
+    s: "Слайд 011 · Roberto Cavalli",
+    img: "https://www.figma.com/api/mcp/asset/b50deaa7-37b1-44c2-8824-ac0b215c940b"
   },
   {
     n: "12",
-    t: "Turri",
-    d: "Традиции итальянского мастерства, отточенные до современного люксового стандарта.",
-    s: "Слайд 012",
-    img: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1800&q=80"
+    t: "Gianfranco Ferré Home",
+    d: "Стилистическое переосмысление наследия Джанфранко Ферре: минималистичные коллекции с элегантной геометрией форм. Продукцию бренда в Казахстане можно приобрести в ID Gallery.",
+    s: "Слайд 012 · Gianfranco Ferré",
+    img: "https://www.figma.com/api/mcp/asset/5120b0fa-9ae1-413d-8424-ac4e088eca07"
   },
   {
     n: "13",
-    t: "Baxter",
-    d: "Уникальные тактильные материалы и спокойная, но мощная визуальная выразительность.",
-    s: "Слайд 013",
-    img: "https://images.unsplash.com/photo-1616464916356-5f5f7f7d86a2?auto=format&fit=crop&w=1800&q=80"
+    t: "Gianfranco Ferré Home",
+    d: "Фото-экспозиция бренда Gianfranco Ferré Home.",
+    s: "Слайд 013 · Gianfranco Ferré",
+    img: "https://www.figma.com/api/mcp/asset/44c0925b-983c-43fc-b4a4-c0b7c8480d98"
   },
   {
     n: "14",
-    t: "NATUZZI ITALIA",
-    d: "Комфорт и эргономика, дополненные узнаваемой эстетикой made in Italy.",
-    s: "Слайд 014",
-    img: "https://images.unsplash.com/photo-1616593969815-012e1f48f4d4?auto=format&fit=crop&w=1800&q=80"
+    t: "ETRO Home Interiors",
+    d: "Современные эклектичные коллекции с узнаваемой эстетикой ETRO. Продукцию ETRO Home Interiors в Казахстане можно приобрести в ID Gallery.",
+    s: "Слайд 014 · ETRO",
+    img: "https://www.figma.com/api/mcp/asset/edf2a72a-380e-4d61-bf77-fedcfb3692ac"
   },
   {
     n: "15",
-    t: "Daytona",
-    d: "Современная роскошь с динамичным характером и изысканными отделками.",
-    s: "Слайд 015",
-    img: "https://images.unsplash.com/photo-1584622781867-53f5f8f6f4c6?auto=format&fit=crop&w=1800&q=80"
+    t: "ETRO Home Interiors",
+    d: "Фото-экспозиция бренда ETRO Home Interiors.",
+    s: "Слайд 015 · ETRO",
+    img: "https://www.figma.com/api/mcp/asset/c471a8b1-f88e-4513-975f-c82c904e3fd9"
   },
   {
     n: "16",
-    t: "LAGO",
-    d: "Дизайн, где архитектура модульности создает легкость и свободу компоновки.",
-    s: "Слайд 016",
-    img: "https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1800&q=80"
+    t: "Bonaldo",
+    d: "Итальянская фабрика с 90-летней историей. Idea Decor представляет Bonaldo в Казахстане на эксклюзивных условиях.",
+    s: "Слайд 016 · Bonaldo",
+    img: "https://www.figma.com/api/mcp/asset/a429fb3b-c15c-414c-a022-24ad10d380cf"
   },
   {
     n: "17",
     t: "Bonaldo",
-    d: "Сильная геометрия, пластика линий и выразительные центральные элементы интерьера.",
-    s: "Слайд 017",
-    img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=80"
+    d: "Фото-экспозиция бренда Bonaldo.",
+    s: "Слайд 017 · Bonaldo",
+    img: "https://www.figma.com/api/mcp/asset/30928e39-c567-4856-a72f-3a92ffaac6d7"
   },
   {
     n: "18",
-    t: "Longhi",
-    d: "Сдержанная роскошь и продуманный баланс между классикой и современностью.",
-    s: "Слайд 018",
-    img: "https://images.unsplash.com/photo-1617098900768-1c4d8ea75471?auto=format&fit=crop&w=1800&q=80"
+    t: "Lalique",
+    d: "Символ французской роскоши, соединяющий ювелирную точность и магию хрусталя. Продукцию Lalique в Казахстане можно приобрести в Idea Decor.",
+    s: "Слайд 018 · Lalique",
+    img: "https://www.figma.com/api/mcp/asset/753e5401-df5c-40b6-aa28-2d287793d3b9"
   },
   {
     n: "19",
-    t: "Giorgio Collection",
-    d: "Ар-деко мотивы, редкие материалы и высокий уровень детализации.",
-    s: "Слайд 019",
-    img: "https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=1800&q=80"
+    t: "Lalique",
+    d: "Фото-экспозиция бренда Lalique.",
+    s: "Слайд 019 · Lalique",
+    img: "https://www.figma.com/api/mcp/asset/9d3bc6dc-99b3-4217-886c-a2d325567cfb"
   },
   {
     n: "20",
-    t: "Minotti",
-    d: "Архитектурная эстетика soft minimal с безупречным качеством исполнения.",
-    s: "Слайд 020",
-    img: "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1800&q=80"
+    t: "Loro Piana Interiors",
+    d: "Тактильное совершенство легендарных тканей в интерьере дома. Продукцию Loro Piana Interiors в Казахстане можно приобрести в Idea Decor.",
+    s: "Слайд 020 · Loro Piana",
+    img: "https://www.figma.com/api/mcp/asset/dda514f7-402f-46ac-b219-5a186d406ac3"
   },
   {
     n: "21",
-    t: "Poltrona Frau",
-    d: "Культовые кожаные решения и мастерство, признанное эталоном в мире дизайна.",
-    s: "Слайд 021",
-    img: "https://images.unsplash.com/photo-1618220252344-8ec99ec624b1?auto=format&fit=crop&w=1800&q=80"
+    t: "Loro Piana Interiors",
+    d: "Фото-экспозиция бренда Loro Piana Interiors.",
+    s: "Слайд 021 · Loro Piana",
+    img: "https://www.figma.com/api/mcp/asset/9316c7ca-d22c-474f-b8b5-6daa3ea8b395"
   },
   {
     n: "22",
-    t: "3D Туры",
-    d: "Погрузитесь в атмосферу салонов ID Gallery в Астане и Алматы не выходя из дома.",
-    s: "Слайд 022",
+    t: "3D туры",
+    d: "Откройте для себя мир 3D-туров по салонам ID Gallery в Астане и Алматы.",
+    s: "Слайд 022 · 3D туры",
     img: "https://images.unsplash.com/photo-1615529162924-f86053884667?auto=format&fit=crop&w=1800&q=80"
   },
   {
     n: "23",
-    t: "Виртуальные Экскурсии",
-    d: "Исследуйте каждую деталь интерьеров и подберите решения для вашего пространства.",
-    s: "Слайд 023",
+    t: "Виртуальные экскурсии",
+    d: "Исследуйте каждую деталь интерьеров и выбирайте решения для своего пространства.",
+    s: "Слайд 023 · 3D туры",
     img: "https://images.unsplash.com/photo-1617098474202-0d0d7f60b47c?auto=format&fit=crop&w=1800&q=80"
   },
   {
     n: "24",
-    t: "Фото Салонов",
-    d: "Реальные проекты, которые демонстрируют масштаб, композицию и качество материалов.",
-    s: "Слайд 024",
+    t: "Фото салонов",
+    d: "Погружение в реальную атмосферу экспозиций ID Gallery.",
+    s: "Слайд 024 · Фото салонов",
     img: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1800&q=80"
   },
   {
     n: "25",
-    t: "Галерея Пространств",
-    d: "Коллекция атмосферных интерьерных сцен с акцентом на свет и текстуру.",
-    s: "Слайд 025",
+    t: "Фото салонов",
+    d: "Коллекция интерьерных кадров и пространственных решений.",
+    s: "Слайд 025 · Фото салонов",
     img: "https://images.unsplash.com/photo-1617098900591-3f90928e8c54?auto=format&fit=crop&w=1800&q=80"
   },
   {
     n: "26",
     t: "Контакты",
     d: "ID Gallery · Астана / Алматы · Индивидуальная консультация и комплектация проектов под ключ.",
-    s: "Слайд 026",
+    s: "Слайд 026 · Контакты",
     img: "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1800&q=80"
   }
 ];
