@@ -12,6 +12,7 @@ const stripPhotos = [
 const brands = [
   {
     name: "Visionnaire",
+    id: "visionnaire",
     logo: `${ASSET}/logo-visionnaire-white.png`,
     photo: `${ASSET}/visionnaire.png`,
     text: "Итальянский meta-luxury бренд мебели и декора, который работает в формате total look и превращает интерьер в цельный дизайнерский образ.",
@@ -19,6 +20,7 @@ const brands = [
   },
   {
     name: "Baxter",
+    id: "baxter",
     logo: `${ASSET}/logo-baxter-white.png`,
     photo: `${ASSET}/baxter.png`,
     text: "Легендарная фабрика, превратившая натуральную кожу в искусство: брутальная эстетика, редкие материалы и коллекции от ведущих мировых дизайнеров.",
@@ -26,6 +28,7 @@ const brands = [
   },
   {
     name: "Molteni&C",
+    id: "molteni",
     logo: `${ASSET}/logo-molteni-white.png`,
     photo: `${ASSET}/molteni.png`,
     text: "Более 90 лет задает стандарты современной люксовой мебели: архитектурный дизайн, коллекции Heritage и безупречное качество исполнения.",
@@ -33,6 +36,7 @@ const brands = [
   },
   {
     name: "Roberto Cavalli Home Interiors",
+    id: "roberto-cavalli",
     logo: `${ASSET}/logo-roberto-white.png`,
     photo: `${ASSET}/roberto.png`,
     text: "Яркая интерьерная коллекция fashion-дома Roberto Cavalli: смелые фактуры, анималистические мотивы и флорентийское качество ручной работы.",
@@ -40,6 +44,7 @@ const brands = [
   },
   {
     name: "Gianfranco Ferré Home",
+    id: "ferre",
     logo: `${ASSET}/logo-ferre-white.png`,
     photo: `${ASSET}/ferre.png`,
     text: "Минималистичная итальянская эстетика с четкой геометрией, благородными материалами и респектабельным характером коллекций.",
@@ -47,6 +52,7 @@ const brands = [
   },
   {
     name: "ETRO Home Interiors",
+    id: "etro",
     logo: `${ASSET}/logo-etro-white.png`,
     photo: `${ASSET}/etro.png`,
     text: "Эклектичный интерьерный стиль ETRO: фирменный пейсли, культурные мотивы и выразительные текстильные решения уровня haute interior.",
@@ -54,6 +60,7 @@ const brands = [
   },
   {
     name: "Bonaldo",
+    id: "bonaldo",
     logo: `${ASSET}/logo-bonaldo-white.png`,
     photo: `${ASSET}/bonaldo.png`,
     text: "Итальянский бренд с 90-летней историей: гармония дизайна и комфорта, широкий каталог и коллекции от международных звезд дизайна.",
@@ -61,6 +68,7 @@ const brands = [
   },
   {
     name: "Lalique",
+    id: "lalique",
     logo: `${ASSET}/logo-lalique-white.png`,
     photo: `${ASSET}/lalique.png`,
     text: "Французский символ роскоши, объединяющий ювелирную точность и хрусталь: от декора и света до масштабных интерьерных объектов.",
@@ -68,6 +76,7 @@ const brands = [
   },
   {
     name: "Loro Piana Interiors",
+    id: "loro-piana",
     logo: `${ASSET}/logo-loro-white.png`,
     photo: `${ASSET}/loro.png`,
     text: "Тактильная роскошь интерьерного текстиля: редкие кашемировые и шелковые материалы, созданные для мебели и декора премиального уровня.",
@@ -154,13 +163,16 @@ heroSalons.forEach((item) => {
 });
 
 brands.forEach((brand, i) => {
-  const logo = document.createElement("div");
-  logo.className = "logo-chip";
-  logo.append(makeImg(brand.logo, `${brand.name} logo`));
-  brandLogoWall.append(logo);
+  const logoLink = document.createElement("a");
+  logoLink.className = "logo-chip";
+  logoLink.href = `#brand-${brand.id}`;
+  logoLink.setAttribute("aria-label", `Перейти к карточке ${brand.name}`);
+  logoLink.append(makeImg(brand.logo, `${brand.name} logo`));
+  brandLogoWall.append(logoLink);
 
   const card = document.createElement("article");
   card.className = "card";
+  card.id = `brand-${brand.id}`;
   card.style.transitionDelay = `${Math.min(i * 55, 280)}ms`;
 
   card.innerHTML = `
@@ -238,5 +250,15 @@ menuLinks.forEach((link) => {
     const target = document.querySelector(link.getAttribute("href"));
     if (!target) return;
     target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
+
+document.querySelectorAll('.logo-chip[href^="#brand-"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 });

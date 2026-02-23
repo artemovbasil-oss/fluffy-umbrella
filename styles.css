@@ -221,6 +221,18 @@ body {
   display: grid;
   place-items: center;
   padding: 8px;
+  text-decoration: none;
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.logo-chip:hover {
+  transform: translateY(-2px);
+  border-color: #b99a6a;
+}
+
+.logo-chip:focus-visible {
+  outline: 2px solid #b99a6a;
+  outline-offset: 2px;
 }
 
 .logo-chip img {
