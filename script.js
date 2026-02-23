@@ -75,6 +75,12 @@ const brands = [
   }
 ];
 
+const heroSalons = [
+  { photo: `${ASSET}/visionnaire.png`, logo: `${ASSET}/logo-visionnaire-white.png`, name: "Visionnaire" },
+  { photo: `${ASSET}/baxter.png`, logo: `${ASSET}/logo-baxter-white.png`, name: "Baxter" },
+  { photo: `${ASSET}/molteni.png`, logo: `${ASSET}/logo-molteni-white.png`, name: "Molteni&C" }
+];
+
 const heroStrip = document.getElementById("heroStrip");
 const aboutGrid = document.getElementById("aboutGrid");
 const salonsStrip = document.getElementById("salonsStrip");
@@ -99,7 +105,11 @@ function makeImg(src, alt, className, opts = {}) {
 }
 
 stripPhotos.forEach((src, i) => {
-  heroStrip.append(makeImg(src, "ID Gallery", "", { high: i < 2 }));
+  const col = document.createElement("div");
+  col.className = "hero-col";
+  col.style.animationDelay = `${i * 90}ms`;
+  col.append(makeImg(src, "ID Gallery", "", { high: i < 2 }));
+  heroStrip.append(col);
 
   const a = document.createElement("div");
   a.className = "tile";
@@ -107,10 +117,17 @@ stripPhotos.forEach((src, i) => {
   aboutGrid.append(a);
 });
 
-const salonShot = document.createElement("div");
-salonShot.className = "shot";
-salonShot.append(makeImg(`${ASSET}/salony.png`, "Фото салонов"));
-salonsStrip.append(salonShot);
+heroSalons.forEach((item, i) => {
+  const card = document.createElement("article");
+  card.className = "salon-card";
+  card.style.animationDelay = `${120 + i * 120}ms`;
+
+  const photo = makeImg(item.photo, item.name);
+  const logo = makeImg(item.logo, `${item.name} logo`, "salon-logo");
+
+  card.append(photo, logo);
+  salonsStrip.append(card);
+});
 
 brands.forEach((brand, i) => {
   const logo = document.createElement("div");

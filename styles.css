@@ -81,9 +81,21 @@ body {
   grid-template-columns: repeat(6, 1fr);
 }
 
-.hero-strip img,
+.hero-col,
+.salon-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-col {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: soft-in 500ms ease forwards;
+}
+
+.hero-col img,
 .about-grid img,
-.salons-strip img {
+.salon-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -303,11 +315,33 @@ body {
 }
 
 .salons-strip {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
 }
 
-.salons-strip .shot {
-  height: 255px;
+.salon-card {
+  height: 360px;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: soft-in 540ms ease forwards;
+}
+
+.salon-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.78));
+}
+
+.salon-logo {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 14px;
+  z-index: 2;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(1.15);
 }
 
 .contacts {
@@ -318,6 +352,19 @@ body {
 .contacts p {
   margin: 4px 0;
   font-size: 18px;
+}
+
+.contacts a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 35%, transparent);
+  padding-bottom: 1px;
+  transition: border-color 220ms ease, color 220ms ease;
+}
+
+.contacts a:hover {
+  border-color: #b99a6a;
+  color: #b99a6a;
 }
 
 .contacts .person {
@@ -352,10 +399,24 @@ body {
   transform: translateY(0);
 }
 
+@keyframes soft-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .card,
-  [data-reveal] {
+  [data-reveal],
+  .hero-col,
+  .salon-card {
     transition: none;
+    animation: none;
     transform: none;
     opacity: 1;
   }
