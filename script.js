@@ -76,9 +76,30 @@ const brands = [
 ];
 
 const heroSalons = [
-  { photo: `${ASSET}/visionnaire.png`, logo: `${ASSET}/logo-visionnaire-white.png`, name: "Visionnaire" },
-  { photo: `${ASSET}/baxter.png`, logo: `${ASSET}/logo-baxter-white.png`, name: "Baxter" },
-  { photo: `${ASSET}/molteni.png`, logo: `${ASSET}/logo-molteni-white.png`, name: "Molteni&C" }
+  {
+    photo: `${ASSET}/visionnaire.png`,
+    logo: `${ASSET}/logo-visionnaire-white.png`,
+    name: "Visionnaire",
+    logoWidth: 86.735,
+    logoHeight: 25,
+    logoBottom: 12
+  },
+  {
+    photo: `${ASSET}/baxter.png`,
+    logo: `${ASSET}/logo-baxter-white.png`,
+    name: "Baxter",
+    logoWidth: 69,
+    logoHeight: 35,
+    logoBottom: 8
+  },
+  {
+    photo: `${ASSET}/molteni.png`,
+    logo: `${ASSET}/logo-molteni-white.png`,
+    name: "Molteni&C",
+    logoWidth: 74.28,
+    logoHeight: 42,
+    logoBottom: 6
+  }
 ];
 
 const heroStrip = document.getElementById("heroStrip");
@@ -117,13 +138,16 @@ stripPhotos.forEach((src, i) => {
   aboutGrid.append(a);
 });
 
-heroSalons.forEach((item, i) => {
+heroSalons.forEach((item) => {
   const card = document.createElement("article");
   card.className = "salon-card";
-  card.style.animationDelay = `${120 + i * 120}ms`;
 
   const photo = makeImg(item.photo, item.name);
   const logo = makeImg(item.logo, `${item.name} logo`, "salon-logo");
+  logo.style.width = `${item.logoWidth}px`;
+  logo.style.height = `${item.logoHeight}px`;
+  logo.style.left = `calc(50% - ${item.logoWidth / 2}px)`;
+  logo.style.bottom = `${item.logoBottom}px`;
 
   card.append(photo, logo);
   salonsStrip.append(card);

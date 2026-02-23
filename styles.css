@@ -315,33 +315,27 @@ body {
 }
 
 .salons-strip {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
+  grid-template-columns: 118px 118px 119px;
+  justify-content: center;
+  gap: 6px;
 }
 
 .salon-card {
-  height: 360px;
-  opacity: 0;
-  transform: translateY(18px);
-  animation: soft-in 540ms ease forwards;
+  height: 337px;
 }
 
 .salon-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.78));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.92));
 }
 
 .salon-logo {
   position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 14px;
   z-index: 2;
-  height: 28px;
   object-fit: contain;
-  filter: brightness(1.15);
+  filter: brightness(1.16);
 }
 
 .contacts {
@@ -413,8 +407,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .card,
   [data-reveal],
-  .hero-col,
-  .salon-card {
+  .hero-col {
     transition: none;
     animation: none;
     transform: none;
