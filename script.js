@@ -77,38 +77,55 @@ const heroStrip = document.getElementById("heroStrip");
 const aboutGrid = document.getElementById("aboutGrid");
 const salonsStrip = document.getElementById("salonsStrip");
 const brandCards = document.getElementById("brandCards");
+const brandLogoWall = document.getElementById("brandLogoWall");
+const themeToggle = document.getElementById("themeToggle");
 
-stripPhotos.forEach((src) => {
+function makeImg(src, alt, className, opts = {}) {
   const img = document.createElement("img");
   img.src = src;
-  img.alt = "ID Gallery";
-  heroStrip.append(img);
+  img.alt = alt;
+  if (className) img.className = className;
+  img.decoding = "async";
+  img.referrerPolicy = "no-referrer";
+  if (opts.high) {
+    img.fetchPriority = "high";
+    img.loading = "eager";
+  } else {
+    img.loading = "lazy";
+  }
+  return img;
+}
+
+stripPhotos.forEach((src, i) => {
+  heroStrip.append(makeImg(src, "ID Gallery", "", { high: i < 2 }));
 
   const a = document.createElement("div");
   a.className = "tile";
-  const ai = document.createElement("img");
-  ai.src = src;
-  ai.alt = "ID Gallery";
-  a.append(ai);
+  a.append(makeImg(src, "ID Gallery"));
   aboutGrid.append(a);
 
   const s = document.createElement("div");
   s.className = "shot";
-  const si = document.createElement("img");
-  si.src = src;
-  si.alt = "Фото салона";
-  s.append(si);
+  s.append(makeImg(src, "Фото салона"));
   salonsStrip.append(s);
 });
 
-brands.forEach((brand) => {
+brands.forEach((brand, i) => {
+  const logo = document.createElement("div");
+  logo.className = "logo-chip";
+  logo.append(makeImg(brand.logo, `${brand.name} logo`));
+  brandLogoWall.append(logo);
+
   const card = document.createElement("article");
   card.className = "card";
+  card.style.transitionDelay = `${Math.min(i * 55, 280)}ms`;
 
   card.innerHTML = `
-    <img class="card-photo" src="${brand.photo}" alt="${brand.name}" />
+    <img class="card-photo" src="${brand.photo}" alt="${brand.name}" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
     <div class="card-body">
-      <img class="card-logo" src="${brand.logo}" alt="${brand.name} logo" />
+      <div class="card-logo-wrap">
+        <img class="card-logo" src="${brand.logo}" alt="${brand.name} logo" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+      </div>
       <h3 class="card-title">${brand.name}</h3>
       <p class="card-text">${brand.text}</p>
       <p class="card-note">${brand.note}</p>
@@ -118,8 +135,31 @@ brands.forEach((brand) => {
   brandCards.append(card);
 });
 
-const cards = document.querySelectorAll(".card");
-const observer = new IntersectionObserver(
+const themeKey = "idg_theme";
+const mq = window.matchMedia("(prefers-color-scheme: dark)");
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  themeToggle.textContent = theme === "dark" ? "☾" : "☀";
+}
+
+const saved = localStorage.getItem(themeKey);
+applyTheme(saved || (mq.matches ? "dark" : "light"));
+
+themeToggle.addEventListener("click", () => {
+  const current = document.documentElement.getAttribute("data-theme");
+  const next = current === "dark" ? "light" : "dark";
+  localStorage.setItem(themeKey, next);
+  applyTheme(next);
+});
+
+mq.addEventListener("change", (e) => {
+  if (localStorage.getItem(themeKey)) return;
+  applyTheme(e.matches ? "dark" : "light");
+});
+
+const revealEls = document.querySelectorAll("[data-reveal], .card");
+const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -127,7 +167,42 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.18 }
+  { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
 );
 
-cards.forEach((card) => observer.observe(card));
+revealEls.forEach((el) => revealObserver.observe(el));
+
+const sections = document.querySelectorAll("main section[id]");
+const menuLinks = document.querySelectorAll(".menu-link");
+
+const menuObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      menuLinks.forEach((l) => l.classList.remove("is-active"));
+      const active = document.querySelector(`.menu-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add("is-active");
+    });
+  },
+  { threshold: 0.45 }
+);
+
+sections.forEach((section) => menuObserver.observe(section));
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
+window.addEventListener(
+  "scroll",
+  () => {
+    const y = window.scrollY;
+    heroStrip.style.transform = `translateY(${y * 0.07}px) scale(${1.02 + Math.min(y / 8000, 0.02)})`;
+  },
+  { passive: true }
+);

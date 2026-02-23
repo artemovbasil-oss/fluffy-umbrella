@@ -10,47 +10,59 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">☾</button>
+
     <main class="page" id="page">
-      <section class="hero" aria-label="ID Gallery обложка">
+      <section class="hero" id="top" aria-label="ID Gallery обложка">
         <div class="hero-strip" id="heroStrip"></div>
         <div class="hero-fade"></div>
-        <div class="hero-text">
+
+        <div class="hero-text" data-reveal>
           <h1>ID Gallery</h1>
           <p>искусство создания уникальных интерьеров<br />и резиденций класса люкс</p>
         </div>
+
+        <nav class="hero-menu" aria-label="Разделы сайта" data-reveal>
+          <a href="#about" class="menu-link"><span>01</span><b>О компании</b></a>
+          <a href="#brands" class="menu-link"><span>02</span><b>Наши бренды</b></a>
+          <a href="#tours" class="menu-link"><span>03</span><b>3d-туры по салонам</b></a>
+          <a href="#salons" class="menu-link"><span>04</span><b>Фото салонов</b></a>
+          <a href="#contacts" class="menu-link menu-link-wide"><span>05</span><b>Контакты</b></a>
+        </nav>
       </section>
 
-      <section class="about section" aria-label="О компании">
-        <h2>О компании<br />ID Gallery</h2>
-        <div class="about-grid" id="aboutGrid"></div>
-        <p class="about-copy">
+      <section class="about section" id="about" aria-label="О компании">
+        <h2 data-reveal>О компании<br />ID Gallery</h2>
+        <div class="about-grid" id="aboutGrid" data-reveal></div>
+        <p class="about-copy" data-reveal>
           IdeaDecor — искусство создания уникальных интерьеров и резиденций класса люкс, сочетающих итальянский дизайн,
           ручное мастерство, технологические инновации и бескомпромиссное качество.
         </p>
       </section>
 
-      <section class="brands section" aria-label="Наши бренды">
-        <p class="section-tag">[ &nbsp; наши бренды &nbsp; ]</p>
+      <section class="brands section" id="brands" aria-label="Наши бренды">
+        <p class="section-tag" data-reveal>[ &nbsp; наши бренды &nbsp; ]</p>
+        <div class="brand-logo-wall" id="brandLogoWall" data-reveal></div>
         <div class="brand-cards" id="brandCards"></div>
       </section>
 
-      <section class="section" aria-label="3D туры">
-        <p class="section-tag">[ &nbsp; 3D туры &nbsp; ]</p>
-        <p class="coming">coming soon</p>
+      <section class="section" id="tours" aria-label="3D туры">
+        <p class="section-tag" data-reveal>[ &nbsp; 3D туры &nbsp; ]</p>
+        <p class="coming" data-reveal>coming soon</p>
       </section>
 
-      <section class="section" aria-label="Фото салонов">
-        <p class="section-tag">[ &nbsp; Фото салонов &nbsp; ]</p>
-        <div class="salons-strip" id="salonsStrip"></div>
+      <section class="section" id="salons" aria-label="Фото салонов">
+        <p class="section-tag" data-reveal>[ &nbsp; Фото салонов &nbsp; ]</p>
+        <div class="salons-strip" id="salonsStrip" data-reveal></div>
       </section>
 
-      <section class="section contacts" aria-label="Контакты">
-        <p class="section-tag">[ &nbsp; Контакты &nbsp; ]</p>
-        <p class="person">Луценко Елена</p>
-        <p class="role">директор по продажам</p>
-        <p>Тел: +7 777 079 19 77</p>
-        <p>WhatsApp: +7 777 079 19 77</p>
-        <p>E-mail: e.lutsenko@ideadecor.kz</p>
+      <section class="section contacts" id="contacts" aria-label="Контакты">
+        <p class="section-tag" data-reveal>[ &nbsp; Контакты &nbsp; ]</p>
+        <p class="person" data-reveal>Луценко Елена</p>
+        <p class="role" data-reveal>директор по продажам</p>
+        <p data-reveal>Тел: +7 777 079 19 77</p>
+        <p data-reveal>WhatsApp: +7 777 079 19 77</p>
+        <p data-reveal>E-mail: e.lutsenko@ideadecor.kz</p>
       </section>
 
       <footer class="footline">
