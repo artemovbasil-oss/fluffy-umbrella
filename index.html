@@ -3,24 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ID Gallery - Презентация</title>
+    <title>ID Gallery - Mobile One Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Montserrat+Alternates:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Manrope:wght@400;500;700&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <p>ID Gallery</p>
-      <p class="progress" id="progress">01 / 26</p>
-    </header>
+    <main class="page" id="page">
+      <section class="hero" aria-label="ID Gallery обложка">
+        <div class="hero-strip" id="heroStrip"></div>
+        <div class="hero-fade"></div>
+        <div class="hero-text">
+          <h1>ID Gallery</h1>
+          <p>искусство создания уникальных интерьеров<br />и резиденций класса люкс</p>
+        </div>
+      </section>
 
-    <main id="slides" aria-label="Презентация ID Gallery"></main>
+      <section class="about section" aria-label="О компании">
+        <h2>О компании<br />ID Gallery</h2>
+        <div class="about-grid" id="aboutGrid"></div>
+        <p class="about-copy">
+          IdeaDecor — искусство создания уникальных интерьеров и резиденций класса люкс, сочетающих итальянский дизайн,
+          ручное мастерство, технологические инновации и бескомпромиссное качество.
+        </p>
+      </section>
 
-    <footer class="site-footer">
-      <p>ID Gallery</p>
-      <p>©2026</p>
-    </footer>
+      <section class="brands section" aria-label="Наши бренды">
+        <p class="section-tag">[ &nbsp; наши бренды &nbsp; ]</p>
+        <div class="brand-cards" id="brandCards"></div>
+      </section>
+
+      <section class="section" aria-label="3D туры">
+        <p class="section-tag">[ &nbsp; 3D туры &nbsp; ]</p>
+        <p class="coming">coming soon</p>
+      </section>
+
+      <section class="section" aria-label="Фото салонов">
+        <p class="section-tag">[ &nbsp; Фото салонов &nbsp; ]</p>
+        <div class="salons-strip" id="salonsStrip"></div>
+      </section>
+
+      <section class="section contacts" aria-label="Контакты">
+        <p class="section-tag">[ &nbsp; Контакты &nbsp; ]</p>
+        <p class="person">Луценко Елена</p>
+        <p class="role">директор по продажам</p>
+        <p>Тел: +7 777 079 19 77</p>
+        <p>WhatsApp: +7 777 079 19 77</p>
+        <p>E-mail: e.lutsenko@ideadecor.kz</p>
+      </section>
+
+      <footer class="footline">
+        <span>ID Gallery</span>
+        <span>©2026</span>
+      </footer>
+    </main>
 
     <script src="/script.js"></script>
   </body>
